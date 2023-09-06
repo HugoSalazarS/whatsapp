@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Envío WhatsApp Masivo</title>
+  <link rel="stylesheet" href="../static/styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h1>Cargar archivo</h1>
+  <form id="upload-form">
+    <input type="file" id="file-input" accept=".csv, .xlsx, .xls">
+    <input type="submit" value="Cargar">
+  </form>
+
+  <div id="message-container" style="display: none;">
+    <p>Archivo cargado correctamente.</p>
+
+    <h1>Nombres de las columnas</h1>
+    <div id="columnas"></div>
+
+    <textarea id="mensaje-input" placeholder="Ingrese su mensaje personalizado"></textarea>
+
+    <div>
+      <label for="columna-select">Seleccionar columna de número:</label>
+      <select id="columna-select"></select>
+      <button id="select-column-numero">Seleccionar</button>
+    </div>
+
+    <div>
+      <label for="columna-mensaje-select">Seleccionar columna de mensaje:</label>
+      <select id="columna-mensaje-select"></select>
+      <button id="select-column-mensaje">Seleccionar</button>
+    </div>
+
+    <button id="send-messages">Enviar mensajes</button>
+  </div>
+
+  <script src="../static/script.js"></script>
+</body>
+</html>
